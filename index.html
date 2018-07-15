@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+    		<meta name="viewport" content="initial-scale=1.0">
+    		<meta charset="utf-8">
+    		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Best places in Arizona to buy a cabin</title>
+		</head>
+
+		<body>
+
+			<div id="sidebar">
+        <span class="close" data-bind="click: expandSidebar">✘</span><br>
+				<h3>Areas of interest</h3>
+				<ul class="#item-list" data-bind="foreach: { data: visibleLocations, as: 'place' }">
+          <li>
+            <span data-bind="text: title, click: $parent.setLocation.bind($data, id)"></span>
+          </li>
+				</ul>
+        <span class="filter">
+          Filter by region: <select data-bind="options: changeArea, selectedOptions: selectedArea"></select>
+        </span>
+			</div>
+
+			<div id="map"></div>
+
+			<div id="sidebar-button" data-bind="click: expandSidebar">Areas of interest</div>
+
+			<script src="js/knockout-3.4.2.js" type="text/javascript"></script>
+
+      <script src="js/app.js" type="text/javascript"></script>
+
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdqxU_ySBsCVnHUcul2NlAUfwwCl4zu_Y&callback=grabInfo"></script>
+
+  		</body>
+	</html>

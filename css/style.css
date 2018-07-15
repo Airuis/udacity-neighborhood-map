@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#map {
+  height: 100%;
+}
+      
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+#sidebar {
+  bottom: 0;
+  width:200px;
+  color: #fff;
+  background-color:#000;
+  position:fixed!important;
+  z-index:1;
+  overflow:auto;
+  display: none;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#sidebar li {
+  cursor: pointer;
+}
+
+#sidebar-button {
+  position: fixed;
+  bottom: 35px;
+  left: 15px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  border: solid #d3d3d3 1px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+#sidebar.show {
+  display: block;
+  position: absolute;
+  animation: slidein 0.6s;
+}
+
+@keyframes slidein {
+  from {
+    left: -300px;
+    opacity: 0;
+  } 
+  to {
+    left: 0;
+    opacity: 1
+  }
+}
+
+.close {
+  float: right;
+  padding-right: 10px;
+  padding-top: 5px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.filter {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+select {
+  background-color: #fff;
+}
